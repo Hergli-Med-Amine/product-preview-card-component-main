@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cream: hsl(30, 38%, 92%);
+    --DarkBlue: hsl(212, 21%, 14%);
+    --GreyBlue: hsl(228, 12%, 48%);
+    --cyan: hsl(158, 36%, 37%);
+    --DarkerCyan: hsl(156, 38%, 20%);
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    background-color: var(--cream);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 1px);
+    margin: 0 1.5rem;
+}
+
+button,
+li {
+    font-family: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    color: var(--DarkBlue);
+    margin-bottom: 1rem;
+    font-size: 2.1rem;
+    font-family: "Fraunces", sans-serif;
+    line-height: 1;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--GreyBlue);
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.2rem;
+}
+
+p {
+    color: var(--GreyBlue);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    font-size: 14px;
+}
+
+.container {
+    max-width: 340px;
+    margin-bottom: 2rem;
+}
+
+.container article:first-child img {
+    border-radius: 1rem 1rem 0 0;
+    margin-bottom: -3px;
+}
+
+.container article:last-child {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.container ul {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.container ul li:first-child {
+    font-size: 2.1rem;
+    margin-right: 1.5rem;
+}
+
+ul li:last-child {
+    color: var(--GreyBlue);
+}
+
+.price {
+    color: var(--cyan);
+    font-family: "Fraunces", sans-serif;
+    font-size: 1rem;
+
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cyan);
+    color: white;
+    border: none;
+    border-radius: 0.6rem;
+    padding: 1rem 2rem;
+    width: 100%;
+    cursor: pointer;
+}
+
+button:hover {
+    transition: 0.2s ease-in;
+    background-color: var(--DarkerCyan);
+  }
+
+button img {
+    margin-right: 0.8rem;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 650px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 550px;
+        margin-bottom: 2rem;
+    }
+
+    .container article:first-child img {
+        border-radius: 1rem 0 0 1rem;
+        margin-bottom: -3px;
+    }
+
+    .container article:last-child {
+        border-radius: 0 1rem 1rem 0;
+        max-height: 100%;
+    }
+}
